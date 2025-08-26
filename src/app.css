@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom styles for the circular icons to match pixel-perfect colors */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e0f2fe; /* Tailwind blue-100 */
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.icon-circle svg {
+    width: 40px;
+    height: 40px;
+    color: #0d9488; /* Tailwind teal-700 */
+}
+.about-icon-circle {
+    background-color: #bfdbfe; /* Tailwind blue-200 for about icon background */
+}
+.about-icon-circle svg {
+    color: #1d4ed8; /* Tailwind blue-700 for about icon */
+}
+
+.sun-icon-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fcd34d; /* Specific amber shade from wireframe */
+    margin: 0 auto;
+    margin-bottom: 0.75rem;
+}
+.sun-icon-circle svg {
+    width: 30px;
+    height: 30px;
+    color: #b45309; /* Specific dark amber shade from wireframe */
+}
+.pink-icon-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fbcfe8; /* Specific light pink shade from wireframe */
+    margin: 0 auto;
+    margin-bottom: 0.75rem;
+}
+.pink-icon-circle svg {
+    width: 30px;
+    height: 30px;
+    color: #be185d; /* Specific dark pink shade from wireframe */
+}
+/* Accordion specific styles */
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem; /* Increased padding */
+    background-color: #eff6ff; /* Tailwind blue-50 */
+    border-bottom: 1px solid #dbeafe; /* Tailwind blue-100 */
+    transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+    background-color: #e0f2fe; /* Tailwind blue-100 */
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+}
+.accordion-content.active {
+    max-height: 500px; /* Adjust as needed, will be dynamic by JS */
+    padding: 1rem 1.5rem;
+}
+.accordion-item:last-child .accordion-header {
+    border-bottom: none;
+}
+.accordion-number-circle {
+    background-color: #2563eb; /* Tailwind blue-600 */
+    color: white;
+    border-radius: 9999px; /* Full rounded */
+    width: 36px; /* Slightly larger */
+    height: 36px; /* Slightly larger */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600; /* Semibold */
+    margin-right: 1rem;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+
+.about-section{
+    background-color: #FFF9F2;
+}
+
+.categories-section{
+    background-color: #FFEBE1;
+}
+
+.evaluation-process-section{
+    background-color: #FFE2E8;
+}
+.awards-section{
+    background-color: #FFEBC3;
+}
